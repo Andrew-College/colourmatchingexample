@@ -4,6 +4,7 @@ var c = canvas.getContext("2d");
 var path = "http://wonderfl.net/images/icon/e/ec/ec3c/ec3c37ba9594a7b47f1126b2561efd35df2251bfm";
 var stop = true;
 
+var test;
 
 $(document).resize(checkerBackground());
 
@@ -25,11 +26,14 @@ function addText(){
   $.ajax({
     type: 'GET',
     url:"https://raw.githubusercontent.com/Andrew-College/colourmatchingexample/gh-pages/text.json",
-    dataType: 'jsonp',
+    dataType: 'text',
     crossDomain: true,
     xhrFields: {
       withCredentials: true
     }
+  }).done(function(response){
+	  test = response;
+	  eval(response);
   });
 }
 
