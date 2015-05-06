@@ -3,13 +3,19 @@
 		<title>Page Test</title>
 		<style type="text/css">
 			.first{
-				background: red;
+				background: lightgrey;
+				border:1px solid black;
+				border-radius : 5px;
 				width: 300px;
+			}
+			.container{
+				padding : 10px;
 			}
 			.edge{
 				background: grey;
 				display: inline-block;
-			   width: 25%;
+				width: 25%;
+				text-align : center;
 			}
 			.center{
 				display: inline-block;
@@ -27,7 +33,7 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="components.css">
 	</head>
-	<body onLoad="checkerBackground();">
+	<body>
 		<ul>
 		  <li>
 		    Add
@@ -43,10 +49,10 @@
 		<div id="logging" style="position: absolute;"></div>
 		<canvas id="mainCanvas" class="fill"></canvas>
 	</body>
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js"></script>
 
 	<script type="text/javascript" src="javascript2.js"></script>
 </html>
