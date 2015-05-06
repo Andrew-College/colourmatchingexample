@@ -24,7 +24,7 @@ function webpage(json){
 function addText(){
   $.ajax({
     type: 'GET',
-    url:"http://192.168.1.8:8080/text.json",
+    url:"https://raw.githubusercontent.com/Andrew-College/colourmatchingexample/gh-pages/text.json",
     dataType: 'jsonp',
     crossDomain: true,
     xhrFields: {
