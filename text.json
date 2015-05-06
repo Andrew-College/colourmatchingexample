@@ -1,0 +1,4 @@
+webpage({
+  "text" :
+  "<div id='text' class='first'><div></div><div><div class='edge'>files<div>hello</div></div><div class='center'>files<div>hello</div></div><div class='edge'>files<div>hello</div></div></div></div>"
+});

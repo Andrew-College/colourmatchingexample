@@ -34,6 +34,7 @@ function loader(){
     }
   }).fail(function(x,h,r){
     console.log("error");
+    console.log(x.getAllResponseHeaders());
     console.log(x.responseText);
     console.log("========");
   });
