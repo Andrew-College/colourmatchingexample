@@ -4,7 +4,14 @@ var c = canvas.getContext("2d");
 var path = "http://wonderfl.net/images/icon/e/ec/ec3c/ec3c37ba9594a7b47f1126b2561efd35df2251bfm";
 var stop = true;
 
-var test;
+
+
+
+
+
+
+
+
 
 $(document).resize(checkerBackground());
 
@@ -23,54 +30,31 @@ function webpage(json){
 }
 
 function addText(){
-  $.ajax({
-    type: 'GET',
-    url:"https://raw.githubusercontent.com/Andrew-College/colourmatchingexample/gh-pages/text.json",
-    dataType: 'text',
-    crossDomain: true,
-    xhrFields: {
-      withCredentials: true
-    }
-  }).done(function(response){
-	  test = response;
-	  eval(response);
-  });
+	var text = webpage({
+		  "text" :
+		  "<div id='text' class='first'><div></div><div><div class='edge'>files<div>hello</div></div><div class='center'>files<div>hello</div></div><div class='edge'>files<div>hello</div></div></div></div>"
+		});
 }
 
 function addPath(){
-  $.ajax({
-    type: 'GET',
-    url:"http://192.168.1.8:8080/path.json",
-    dataType: 'jsonp',
-    crossDomain: true,
-    xhrFields: {
-      withCredentials: true
-    }
-  });
+	var path = webpage({
+		  "text" :
+		  "<div id='path' class='first'><div></div><div><div class='edge'>files<div>goodbye</div></div><div class='center'>files<div>hello</div></div><div class='edge'>files<div>hello</div></div></div></div>"
+		});
 }
 
 function addMath(){
-  $.ajax({
-    type: 'GET',
-    url:"http://192.168.1.8:8080/math.json",
-    dataType: 'jsonp',
-    crossDomain: true,
-    xhrFields: {
-      withCredentials: true
-    }
-  });
+	var math = webpage({
+		  "text" :
+		  "<div id='math' class='first'><div></div><div><div class='edge'>files<div>goodbye</div></div><div class='center'><div><select><option value='Add'>Add</option><option value='Subtract'>Subtract</option><option value='Multiply'>Multiply</option><option value='Divide'>Divide</option><option value='Modulo'>Modulo</option><option value='Exponent'>Exponent</option></select></div></div><div class='edge'>files<div>hello</div></div></div></div>"
+		});
 }
 
 function addShader(){
-  $.ajax({
-    type: 'GET',
-	url:"http://192.168.1.8:8080/shader.json",
-	dataType: 'jsonp',
-    crossDomain: true,
-    xhrFields: {
-      withCredentials: true
-    }
-  });
+	var shader = webpage({
+		  "text" :
+		  "<div id='shader' class='first'><div></div><div><div class='edge'>files<div>goodbye</div></div><div class='center'>files<div>hello</div></div><div class='edge'>files<div>hello</div></div></div></div>"
+		});
 }
 
 function checkerBackground(){
